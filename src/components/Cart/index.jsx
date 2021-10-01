@@ -55,19 +55,17 @@ const Cart = () => {
 					</Toolbar>
 				</AppBar>
 			</header>
-			{
-				(cart.length === 0 && (
-					<Box>
-						<Card>
-							<CardContent>
-								<Typography variant='h6'>
-									Carrinho vazio, adicione algo para que ele apareça aqui
-								</Typography>
-							</CardContent>
-						</Card>
-					</Box>
-				))
-			}
+			{cart.length === 0 && (
+				<Box>
+					<Card>
+						<CardContent>
+							<Typography variant='h6'>
+								Carrinho vazio, adicione algo para que ele apareça aqui
+							</Typography>
+						</CardContent>
+					</Card>
+				</Box>
+			)}
 			<Box
 				sx={{
 					display: 'flex',
@@ -78,7 +76,10 @@ const Cart = () => {
 			>
 				{cart.map((products, index) => {
 					return (
-						<Card key={index} sx={{ marginLeft: 10, marginBottom: 2 }}>
+						<Card
+							key={index}
+							sx={{ marginLeft: 10, marginBottom: 2, width: '320px' }}
+						>
 							<CardMedia
 								component='img'
 								height='220'

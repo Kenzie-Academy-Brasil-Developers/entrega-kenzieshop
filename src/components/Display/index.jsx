@@ -57,7 +57,10 @@ const Display = () => {
 			>
 				{products.map((product, index) => {
 					return (
-						<Card key={index} sx={{ marginLeft: 10, marginBottom: 2, width: '320px'}}>
+						<Card
+							key={index}
+							sx={{ marginLeft: 10, marginBottom: 2, width: '320px' }}
+						>
 							<CardMedia
 								component='img'
 								height='220'
